@@ -1,0 +1,110 @@
+.hero {
+    margin-bottom: 200px;
+}
+
+.hero__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero__body {
+    max-width: 588px;
+    margin-right: 8px;
+}
+
+.hero__sup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.hero__label {
+    margin-right: 16px;
+    background: #fff;
+    border-radius: 32px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000;
+    padding: 6px 16px;
+}
+
+.hero__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 76px;
+    margin-bottom: 24px;
+}
+
+.hero__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 32px;
+    max-width: 435px;
+}
+
+.hero__pic {
+    width: 604px;
+}
+
+.hero__pic img {
+    max-width: 100%;
+}
+
+/* ========================================================================================== */
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1212px) {
+    .hero {
+        margin-top: 50px;
+    }
+    .hero__body {
+        max-width: 500px;
+    }
+    .hero__title {
+        font-size: 54px;
+    }
+}
+
+@media (max-width: 992.98px) {
+    .hero__wrapper {
+        flex-direction: column;
+    }
+    .hero__body {
+        max-width: 100%;
+    }
+    .hero__pic {
+        width: 100%;
+        text-align: center;
+    }
+    .hero__text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero {
+        margin-bottom: 100px;
+        margin-top: 30px;
+    }
+    .hero__title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .hero__body {
+        margin-bottom: 30px;
+    }
+    .hero__label {
+        font-size: 14px;
+    }
+    .hero__sup-text {
+        font-size: 13px;
+    }
+    .hero__title {
+        font-size: 34px;
+        line-height: 50px;
+    }
+}

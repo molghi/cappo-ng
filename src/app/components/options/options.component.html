@@ -1,0 +1,25 @@
+<section class="options">
+    <div class="container">
+        <div class="options__wrapper">
+            <div class="options__title">{{ title }}</div>
+            <div class="options__items">
+                <!-- LOOP OVER AND GENERATE -->
+                <div class="options__item" *ngFor="let item of items">
+                    <div class="options__item-icon">
+                        <img [src]="item.iconPath" alt="option icon" />
+                    </div>
+                    <div class="options__item-name">
+                        <span class="options__item-name-big">{{ item.title }}</span>
+                        <span class="options__item-name-short">{{ item.abbreviation }}</span>
+                    </div>
+                    <div class="options__item-text">{{ item.text }}</div>
+                    <a [href]="item.buttonLink" class="options__item-button">
+                        <span class="options__item-button-text">{{ item.buttonText }}</span>
+                        <span><img [src]="item.buttonIcon" alt="button icon" /></span>
+                    </a>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+    </div>
+</section>

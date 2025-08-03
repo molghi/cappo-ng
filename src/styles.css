@@ -1,1 +1,308 @@
-/* You can add global styles to this file, and also import other style files */
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap";
+
+/* RESET & GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+    display: block;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    position: relative;
+    color: #fff;
+}
+body {
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ========================================================================================== */
+
+body.lock {
+    overflow: hidden;
+}
+@media (max-width: 767.98px) {
+    body.lock {
+        width: 100%;
+        position: fixed;
+        overflow: hidden;
+    }
+}
+
+/* ========================================================================================== */
+
+input,
+button,
+textarea {
+    font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a {
+    color: inherit;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+/* ========================================================================================== */
+
+body {
+    background-color: #222;
+    font-weight: 400;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+@media (max-width: 1212px) {
+    .container {
+        max-width: 970px;
+    }
+}
+@media (max-width: 992.98px) {
+    .container {
+        max-width: 750px;
+    }
+}
+@media (max-width: 767.98px) {
+    .container {
+        max-width: none;
+        padding: 0 10px;
+    }
+}
+
+/* ========================================================================================== */
+
+.button {
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    transition: 0.3s ease 0s;
+    color: #fff;
+    background-color: #3671e9;
+    padding: 18px 32px;
+    border-radius: 32px;
+}
+.button:hover {
+    background-color: #2856b1;
+}
+.button--arrow {
+    display: inline-flex;
+    padding: 16px 16px 16px 24px;
+    font-weight: 500;
+    align-items: center;
+}
+.button--arrow span {
+    min-width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 24px;
+    transition: 0.3s ease 0s;
+}
+.button--arrow span img {
+    position: relative;
+    z-index: 0;
+    left: 1px;
+    top: -1px;
+}
+@media (max-width: 767.98px) {
+    .button--arrow {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* ========================================================================================== */
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+input::placeholder,
+textarea::placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+input:focus::-ms-input-placeholder,
+textarea:focus::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+input,
+textarea {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+textarea {
+    resize: none;
+}
+
+/* ========================================================================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+.logo .logo__icon {
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.logo .logo__text {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.logo:hover {
+    opacity: 0.7;
+}
+
+/* ========================================================================================== */
+
+.input-ok {
+    position: relative;
+}
+.input-ok:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    /* background: url("../images/icons/greenok.svg") 0 0 no-repeat; */
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+}
+.input-error {
+    position: relative;
+}
+.input-error:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    /* background: url("../images/icons/error-icon.svg") 0 0 no-repeat; */
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}

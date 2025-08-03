@@ -1,0 +1,16 @@
+<div class="stat">
+    <div class="container">
+        <div class="stat__wrapper">
+            <!-- LOOP OVER AND GENERATE -->
+            <div class="stat__item" *ngFor="let item of items">
+                <div class="stat__pic">
+                    <img [src]="item.iconPath" alt="stats icon" />
+                </div>
+                <div class="stat__body">
+                    <div class="stat__big-text">{{ item.title }}</div>
+                    <div class="stat__smaller-text">{{ item.text }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

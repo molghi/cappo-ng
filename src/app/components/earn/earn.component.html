@@ -1,0 +1,39 @@
+<section class="earn">
+    <div class="container">
+        <div class="earn__wrapper">
+            <div class="earn__top">
+                <div class="earn__title">{{ title }}</div>
+                <div class="earn__title-text">
+                    {{ text }}
+                </div>
+            </div>
+            <div class="earn__bottom">
+                <div class="earn__block">
+                    <form action="#" class="earn__block-form">
+                        <div class="earn__block-input-box">
+                            <input type="number" class="earn__block-input" [placeholder]="placeholder" />
+                        </div>
+                        <div class="earn__block-select-box">
+                            <select class="earn__block-select">
+                                <!-- LOOP OVER AND GENERATE -->
+                                <option
+                                    *ngFor="let item of selectOptions; let index = index"
+                                    [value]="index"
+                                    [selected]="index === 0"
+                                >
+                                    {{ item }}
+                                </option>
+                            </select>
+                        </div>
+                        <button class="earn__block-button button">{{ buttonText }}</button>
+                    </form>
+                    <div class="earn__block-bottom">
+                        <div class="earn__block-text">{{ bottomTitle }}</div>
+                        <div class="earn__block-value">0.055 130 59 ETH <span>($1275)</span></div>
+                        <div class="earn__block-sub-text">{{ bottomText }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

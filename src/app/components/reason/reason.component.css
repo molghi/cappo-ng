@@ -1,0 +1,78 @@
+.why {
+    margin-bottom: 200px;
+}
+
+.why__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 70px;
+}
+
+.why__pic {
+    width: 650px;
+}
+
+.why__pic img {
+    max-width: 100%;
+}
+
+.why__body {
+    max-width: 480px;
+}
+
+.why__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+    margin-bottom: 24px;
+}
+
+.why__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 32px;
+    color: #e0e0e0;
+    max-width: 408px;
+}
+
+.why__button {
+    font-weight: 500;
+}
+
+/* ========================================================================================== */
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 992.98px) {
+    .why__wrapper {
+        flex-direction: column-reverse;
+    }
+    .why__pic {
+        width: 100%;
+        text-align: center;
+    }
+    .why__body {
+        max-width: 100%;
+    }
+    .why__text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .why__button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .why {
+        margin-bottom: 100px;
+    }
+    .why__title {
+        font-size: 34px;
+    }
+}

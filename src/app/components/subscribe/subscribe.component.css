@@ -1,0 +1,148 @@
+.subscribe {
+    margin: 88px 0;
+}
+
+.subscribe__wrapper {
+    background-color: #3671e9;
+    background-color: #3e0b9c;
+    padding: 48px;
+    border-radius: 16px;
+    display: flex;
+    column-gap: 190px;
+    position: relative;
+}
+
+.subscribe__wrapper:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 22px;
+    /* background: url("../images/content/ethe.png") 0 0 no-repeat; */
+    width: 160px;
+    height: 216px;
+}
+
+.subscribe__wrapper:before {
+    content: "";
+    position: absolute;
+    top: 81px;
+    right: 15px;
+    /* background: url("../images/content/bitc.png") 0 0 no-repeat; */
+    width: 140px;
+    height: 135px;
+}
+
+.subscribe__body {
+    max-width: 348px;
+    position: relative;
+    z-index: 1;
+}
+
+.subscribe__title {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.subscribe__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.subscribe__form {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe__input-box {
+    margin-right: 40px;
+}
+
+.subscribe__input {
+    width: 374px;
+    background-color: rgba(0, 0, 0, 0);
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.subscribe__input:focus {
+    border-color: coral;
+}
+
+.subscribe__button {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 32px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.5s;
+    position: relative;
+    z-index: 1;
+}
+
+.subscribe__button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* ========================================================================================== */
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1212px) {
+    .subscribe__wrapper {
+        column-gap: 100px;
+    }
+    .subscribe__input {
+        width: 250px;
+    }
+}
+
+@media (max-width: 992.98px) {
+    .subscribe__wrapper {
+        flex-direction: column;
+    }
+    .subscribe__body {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .subscribe__input-box {
+        width: 100%;
+    }
+    .subscribe__input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .subscribe {
+        margin-bottom: 30px;
+    }
+    .subscribe__wrapper:before {
+        top: auto;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .subscribe__title {
+        font-size: 28px;
+    }
+    .subscribe__form {
+        flex-direction: column;
+    }
+    .subscribe__input-box {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .subscribe__button {
+        width: 100%;
+    }
+    .subscribe__wrapper {
+        padding: 48px 24px;
+    }
+}

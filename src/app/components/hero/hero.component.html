@@ -1,0 +1,28 @@
+<section class="hero">
+    <div class="container">
+        <div class="hero__wrapper">
+            <!-- left col -->
+            <div class="hero__body">
+                <div class="hero__sup">
+                    <div class="hero__label">{{ label }}</div>
+                    <div class="hero__sup-text">{{ textAbove }}</div>
+                </div>
+                <div class="hero__title">{{ title }}</div>
+                <div class="hero__text">
+                    {{ text }}
+                </div>
+                <a [href]="buttonLink" class="hero__button button button--arrow"
+                    >{{ buttonText }}
+                    <span>
+                        <img src="assets/images/icons/arrow-right.svg" alt="arrow right" />
+                    </span>
+                </a>
+            </div>
+
+            <!-- right col -->
+            <div class="hero__pic">
+                <img src="assets/images/content/hero.png" alt="hero img" />
+            </div>
+        </div>
+    </div>
+</section>

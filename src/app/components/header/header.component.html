@@ -1,0 +1,37 @@
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <!-- LOGO -->
+            <a href="index.html" class="header__logo logo">
+                <span class="logo__icon">
+                    <img src="assets/images/icons/logo.svg" alt="" />
+                </span>
+                <span class="logo__text">{{ siteName }}</span>
+            </a>
+
+            <!-- NAV MENU -->
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li class="header__list-item" *ngFor="let item of navMenu">
+                        <a
+                            [href]="item.link"
+                            [class]="
+                                item.type === 'link'
+                                    ? 'header__link header__link--regular'
+                                    : item.type === 'login-link'
+                                    ? 'header__link header__link--login'
+                                    : 'header__link header__link--register button'
+                            "
+                            >{{ item.title }}</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- HAMBURGER -->
+            <div class="header__hamburger-menu">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>

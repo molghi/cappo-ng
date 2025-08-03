@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="footer__wrapper">
+        <!-- footer top -->
+        <div class="footer__top">
+            <!-- LOOP OVER AND GENERATE -->
+            <div class="footer__column" *ngFor="let column of columns">
+                <!-- LOGO COLUMN -->
+                <ng-container *ngIf="column.colType === 'site-name'">
+                    <a href="index.html" class="logo">
+                        <span class="logo__icon">
+                            <img loading="lazy" src="assets/images/icons/logo.svg" alt="" />
+                        </span>
+                        <span class="logo__text">{{ siteName }}</span>
+                    </a>
+                </ng-container>
+
+                <!-- COLUMN WITH A LIST OF LINKS -->
+                <ng-container *ngIf="column.colType === 'with-list'">
+                    <div class="footer__column-title">{{ column.colTitle }}</div>
+                    <ul class="footer__list">
+                        <!-- LOOP OVER AND GENERATE -->
+                        <li class="footer__item" *ngFor="let item of column.list">
+                            <a [href]="item.listItemLink" class="footer__link">{{ item.listItemTitle }}</a>
+                        </li>
+                    </ul>
+                </ng-container>
+
+                <!-- COLUMN WITH PAYMENT OPTIONS -->
+                <ng-container *ngIf="column.colType === 'payment-options'">
+                    <div class="footer__text">{{ column.colText }}</div>
+                    <div class="footer__systems">
+                        <!-- LOOP OVER AND GENERATE -->
+                        <div class="footer__system" *ngFor="let element of column.optionsList">
+                            <img loading="lazy" [src]="element.icon" [title]="element.title" alt="payment option icon" />
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <!-- footer bottom -->
+        <div class="footer__bottom">
+            <div class="footer__copyright">{{ copyrightText }}</div>
+            <div class="footer__social">
+                <!-- LOOP OVER AND GENERATE -->
+                <a *ngFor="let item of socialLinks" [href]="item.link" class="footer__social-link">
+                    <img loading="lazy" [src]="item.icon" [title]="item.title" alt="item icon" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

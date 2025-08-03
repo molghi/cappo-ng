@@ -1,0 +1,214 @@
+.options {
+    background: linear-gradient(180deg, #f8f9fb 0%, #fafbff 100%);
+    padding: 320px 0 100px;
+}
+
+.options__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+    color: #0d0d2b;
+    max-width: 741px;
+    margin: 0 auto 64px;
+    text-align: center;
+}
+
+.options__items {
+    display: flex;
+    justify-content: space-between;
+    color: #0d0d2b;
+    column-gap: 45px;
+}
+
+.options__item {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 48px 24px;
+    min-width: 370px;
+    transition: all 0.5s;
+    text-align: center;
+}
+
+.options__item:hover {
+    background-color: #2b076e;
+}
+
+.options__item:hover .options__item-name-big {
+    color: #fff;
+}
+
+.options__item:hover .options__item-text {
+    color: #fff;
+}
+
+.options__item:hover .options__item-button {
+    border-color: #fff;
+}
+
+.options__item-icon {
+    margin-bottom: 48px;
+}
+
+.options__item-name {
+    display: inline-flex;
+    margin-bottom: 20px;
+}
+
+.options__item-name-big {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 32px;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.options__item-name-short {
+    font-weight: 500;
+    font-size: 18px;
+    opacity: 0.7;
+    color: #bdbdbd;
+    text-transform: uppercase;
+    position: relative;
+    top: 8px;
+    transition: all 0.3s;
+}
+
+.options__item-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 25px;
+    transition: all 0.3s;
+}
+
+.options__item-button {
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.3s;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid silver;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options__item-button span {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.options__item-button span img {
+    width: 12px;
+    height: 20px;
+    position: relative;
+    top: -1px;
+    left: 1px;
+}
+
+.options__item-button-text {
+    font-size: 0;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.options__item-button:hover {
+    transition: all 0.3s;
+    width: auto;
+    padding-left: 24px;
+    padding-right: 16px;
+    background-color: #3671e9;
+    border: 2px solid #3671e9 !important;
+    border-radius: 32px;
+}
+
+.options__item-button:hover span:last-child {
+    margin-left: 24px;
+    background-color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options__item-button:hover span:last-child img {
+    width: 8px;
+    height: 12px;
+}
+
+.options__item-button:hover .options__item-button-text {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* ========================================================================================== */
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1212px) {
+    .options__item {
+        min-width: 293px;
+    }
+}
+
+@media (max-width: 992.98px) {
+    .options__items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .options__item {
+        min-width: 300px;
+        max-width: 350px;
+        margin-bottom: 45px;
+    }
+    .options__item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .options {
+        padding: 80px 0;
+    }
+    .options__title {
+        font-size: 35px;
+    }
+
+    .options__item {
+        max-width: 370px;
+        min-width: 370px;
+        margin-bottom: 20px;
+    }
+    .options__item:nth-child(2) {
+        background-color: #2b076e;
+    }
+    .options__item:nth-child(2) .options__item-name-big {
+        color: #fff;
+    }
+    .options__item:nth-child(2) .options__item-text {
+        color: #fff;
+    }
+    .options__item:nth-child(2) .options__item-button {
+        border-color: #fff;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .options__item {
+        max-width: 300px;
+        min-width: 300px;
+        padding: 24px 12px;
+    }
+    .options__item-icon {
+        margin-bottom: 24px;
+    }
+    .options {
+        padding: 30px 0 80px;
+    }
+    .options__title {
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+}

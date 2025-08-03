@@ -40,3 +40,52 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+*.txt
+
+
+
+
+
+
+
+# Node modules
+node_modules/
+
+# Angular build output
+dist/
+out-tsc/
+
+# Temporary files
+.tmp/
+temp/
+
+# IDE specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+src/environments/*.ts
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Compiled JavaScript files
+*.js
+*.js.map
+
+# Coverage directory
+coverage/
+
+# Optional: generated Angular files
+.angular/cache/
