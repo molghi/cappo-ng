@@ -45,6 +45,22 @@
     border-color: #fff;
 }
 
+.options__item--hovered {
+    background-color: #2b076e;
+}
+
+.options__item--hovered .options__item-name-big {
+    color: #fff;
+}
+
+.options__item--hovered .options__item-text {
+    color: #fff;
+}
+
+.options__item--hovered .options__item-button {
+    border-color: #fff;
+}
+
 .options__item-icon {
     margin-bottom: 48px;
 }

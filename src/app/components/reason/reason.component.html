@@ -9,7 +9,8 @@
                 <div class="why__text">
                     {{ text }}
                 </div>
-                <a [href]="buttonLink" class="why__button button">{{ buttonText }}</a>
+
+                <app-button type="link" [text]="buttonText" additionalClass="why__button" [href]="buttonLink"></app-button>
             </div>
         </div>
     </div>

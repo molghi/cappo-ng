@@ -72,7 +72,7 @@
     position: absolute;
     top: 7px;
     right: 10px;
-    /* background: url("../images/icons/select.svg") 0 0 no-repeat; */
+    background: url("assets/images/icons/select.svg") 0 0 no-repeat;
     background-size: contain;
     width: 11px;
     height: 7px;

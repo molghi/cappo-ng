@@ -150,21 +150,24 @@ body {
     display: inline-block;
     font-family: inherit;
     font-size: inherit;
-    transition: 0.3s ease 0s;
     color: #fff;
     background-color: #3671e9;
     padding: 18px 32px;
     border-radius: 32px;
+    transition: all 0.3s;
 }
+
 .button:hover {
-    background-color: #2856b1;
+    opacity: 0.7;
 }
+
 .button--arrow {
     display: inline-flex;
     padding: 16px 16px 16px 24px;
     font-weight: 500;
     align-items: center;
 }
+
 .button--arrow span {
     min-width: 32px;
     height: 32px;
@@ -176,12 +179,14 @@ body {
     margin-left: 24px;
     transition: 0.3s ease 0s;
 }
+
 .button--arrow span img {
     position: relative;
     z-index: 0;
     left: 1px;
     top: -1px;
 }
+
 @media (max-width: 767.98px) {
     .button--arrow {
         display: flex;

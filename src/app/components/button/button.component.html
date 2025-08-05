@@ -1,0 +1,23 @@
+<!-- CASE 1 -->
+<button
+    *ngIf="type === 'button'"
+    [ngStyle]="{ 'background-color': bgColor, color: color }"
+    [ngClass]="'button ' + additionalClass"
+    [type]="typeSubmit ? 'submit' : ''"
+>
+    {{ text }}
+</button>
+
+<!-- CASE 2 -->
+<a
+    *ngIf="type === 'link' || type === 'link-arrow'"
+    [href]="href"
+    [ngStyle]="{ 'background-color': bgColor, color: color }"
+    [ngClass]="'button ' + additionalClass"
+>
+    {{ text }}
+
+    <span *ngIf="type === 'link-arrow'">
+        <img src="assets/images/icons/arrow-right.svg" alt="arrow right" />
+    </span>
+</a>

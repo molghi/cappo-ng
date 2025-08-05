@@ -1,0 +1,36 @@
+<section class="details">
+    <div class="container">
+        <div class="details__wrapper">
+            <div class="details__title">{{ title }}</div>
+
+            <!-- LOOP OVER AND GENERATE -->
+            <div
+                *ngFor="let item of items; let index = index"
+                [class]="
+                    index === 0
+                        ? 'details__block details__block--1'
+                        : index % 2 === 1
+                        ? 'details__block details__block--reversed'
+                        : 'details__block'
+                "
+            >
+                <div class="details__block-body">
+                    <div class="details__block-title">{{ item.title }}</div>
+                    <div class="details__block-text">
+                        {{ item.text }}
+                    </div>
+
+                    <app-button
+                        type="link"
+                        [href]="item.button.link"
+                        [text]="item.button.text"
+                        additionalClass="details__block-button"
+                    ></app-button>
+                </div>
+                <div class="details__block-pic">
+                    <img [src]="item.image" alt="item image" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

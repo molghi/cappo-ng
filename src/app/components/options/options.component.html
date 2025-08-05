@@ -4,7 +4,11 @@
             <div class="options__title">{{ title }}</div>
             <div class="options__items">
                 <!-- LOOP OVER AND GENERATE -->
-                <div class="options__item" *ngFor="let item of items">
+                <div
+                    *ngFor="let item of items; let i = index"
+                    [class]="i === hoveredOver ? 'options__item options__item--hovered' : 'options__item'"
+                    (mouseenter)="changeHoveredOver(i)"
+                >
                     <div class="options__item-icon">
                         <img [src]="item.iconPath" alt="option icon" />
                     </div>

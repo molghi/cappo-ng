@@ -9,7 +9,15 @@
                 <div class="subscribe__input-box">
                     <input required="true" type="email" class="subscribe__input email" [placeholder]="placeholder" />
                 </div>
-                <button type="submit" class="subscribe__button">{{ buttonText }}</button>
+
+                <app-button
+                    type="button"
+                    [typeSubmit]="true"
+                    [text]="buttonText"
+                    additionalClass="subscribe__button"
+                    bgColor="#fff"
+                    color="#000"
+                ></app-button>
             </form>
         </div>
     </div>

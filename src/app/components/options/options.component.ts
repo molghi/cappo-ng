@@ -20,6 +20,8 @@ export class OptionsComponent {
 
     title: string = 'Trade securely and market the high-growth cryptocurrencies';
 
+    hoveredOver: number = 0;
+
     items: Array<OptionItem> = [
         {
             iconPath: 'assets/images/icons/btc.svg',
@@ -49,4 +51,8 @@ export class OptionsComponent {
             buttonIcon: 'assets/images/icons/arrow-right.svg',
         },
     ];
+
+    changeHoveredOver(index: number) {
+        this.hoveredOver = index;
+    }
 }

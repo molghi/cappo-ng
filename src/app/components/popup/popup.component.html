@@ -1,0 +1,41 @@
+<div class="pop-up-register">
+    <div class="pop-up-register__overlay"></div>
+    <form action="#" class="pop-up-register__form">
+        <div class="pop-up-register__inner">
+            <div class="pop-up-register__close">╳</div>
+
+            <div class="pop-up-register__triggers">
+                <!-- LOOP OVER AND GENERATE -->
+                <a
+                    *ngFor="let triggerItem of triggers; let index = index"
+                    [href]="'#tab-' + (index + 1)"
+                    [class]="triggerItem === 'Sign Up' ? 'pop-up-register__trigger active' : 'pop-up-register__trigger'"
+                    >{{ triggerItem }}</a
+                >
+            </div>
+
+            <div class="pop-up-register__contents">
+                <!-- LOOP OVER AND GENERATE -->
+                <div
+                    *ngFor="let item of content; let index = index"
+                    [class]="item.title === 'Sign Up Form' ? 'pop-up-register__content active' : 'pop-up-register__content'"
+                    [id]="'tab-' + (index + 1)"
+                >
+                    <div class="pop-up-register__title">{{ item.title }}</div>
+
+                    <!-- LOOP OVER AND GENERATE -->
+                    <div *ngFor="let element of item.fields" class="pop-up-register__input-box">
+                        <input
+                            required="true"
+                            [type]="element.type"
+                            class="pop-up-register__input"
+                            [placeholder]="element.placeholder"
+                        />
+                    </div>
+
+                    <button type="submit" class="pop-up-register__button">{{ item.button }}</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
