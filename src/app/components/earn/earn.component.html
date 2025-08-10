@@ -11,14 +11,21 @@
                 <div class="earn__block">
                     <form action="#" class="earn__block-form">
                         <div class="earn__block-input-box">
-                            <input type="number" class="earn__block-input" [placeholder]="placeholder" />
+                            <input
+                                [(ngModel)]="inputValue"
+                                name="inputValue"
+                                type="number"
+                                min="0"
+                                class="earn__block-input"
+                                [placeholder]="placeholder"
+                            />
                         </div>
                         <div class="earn__block-select-box">
-                            <select class="earn__block-select">
+                            <select class="earn__block-select" (change)="onChangeSelect($event)">
                                 <!-- LOOP OVER AND GENERATE -->
                                 <option
                                     *ngFor="let item of selectOptions; let index = index"
-                                    [value]="index"
+                                    [value]="item"
                                     [selected]="index === 0"
                                 >
                                     {{ item }}
@@ -26,11 +33,16 @@
                             </select>
                         </div>
 
-                        <app-button type="button" [text]="buttonText" additionalClass="earn__block-button"></app-button>
+                        <app-button
+                            (click)="calcIt()"
+                            type="button"
+                            [text]="buttonText"
+                            additionalClass="earn__block-button"
+                        ></app-button>
                     </form>
                     <div class="earn__block-bottom">
                         <div class="earn__block-text">{{ bottomTitle }}</div>
-                        <div class="earn__block-value">0.055 130 59 ETH <span>($1275)</span></div>
+                        <div class="earn__block-value">{{ finalAmount }} <span>USD</span></div>
                         <div class="earn__block-sub-text">{{ bottomText }}</div>
                     </div>
                 </div>

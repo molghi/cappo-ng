@@ -13,26 +13,25 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DetailsComponent } from './components/details/details.component';
 import { PopupComponent } from './components/popup/popup.component';
 import { ButtonComponent } from './components/button/button.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    HeroComponent,
-    StatsComponent,
-    ReasonComponent,
-    EarnComponent,
-    OptionsComponent,
-    SubscribeComponent,
-    FooterComponent,
-    DetailsComponent,
-    PopupComponent,
-    ButtonComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        HeroComponent,
+        StatsComponent,
+        ReasonComponent,
+        EarnComponent,
+        OptionsComponent,
+        SubscribeComponent,
+        FooterComponent,
+        DetailsComponent,
+        PopupComponent,
+        ButtonComponent,
+    ],
+    imports: [BrowserModule, FormsModule],
+    providers: [],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

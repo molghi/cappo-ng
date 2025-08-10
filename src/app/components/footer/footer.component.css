@@ -140,7 +140,6 @@
         top: 5px;
         right: 0;
         transform: rotate(90deg);
-        transition: all 0.3s;
     }
     .footer__column-title.active:after {
         transform: rotateZ(-90deg);
@@ -177,5 +176,9 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+    }
+
+    .footer__social-link img {
+        transform: scale(1.5);
     }
 }

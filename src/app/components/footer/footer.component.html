@@ -3,7 +3,7 @@
         <!-- footer top -->
         <div class="footer__top">
             <!-- LOOP OVER AND GENERATE -->
-            <div class="footer__column" *ngFor="let column of columns">
+            <div class="footer__column" *ngFor="let column of columns; let i = index">
                 <!-- LOGO COLUMN -->
                 <ng-container *ngIf="column.colType === 'site-name'">
                     <a href="index.html" class="logo">
@@ -16,8 +16,13 @@
 
                 <!-- COLUMN WITH A LIST OF LINKS -->
                 <ng-container *ngIf="column.colType === 'with-list'">
-                    <div class="footer__column-title">{{ column.colTitle }}</div>
-                    <ul class="footer__list">
+                    <div
+                        (click)="toggleColumn(i)"
+                        [class]="i === activeColumn ? 'footer__column-title active' : 'footer__column-title'"
+                    >
+                        {{ column.colTitle }}
+                    </div>
+                    <ul class="footer__list" [style]="i === activeColumn ? 'display:block' : ''">
                         <!-- LOOP OVER AND GENERATE -->
                         <li class="footer__item" *ngFor="let item of column.list">
                             <a [href]="item.listItemLink" class="footer__link">{{ item.listItemTitle }}</a>

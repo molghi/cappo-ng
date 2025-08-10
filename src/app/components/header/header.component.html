@@ -1,4 +1,4 @@
-<header class="header">
+<header [class]="isHeaderVisible ? 'header sticky' : 'header'">
     <div class="container">
         <div class="header__wrapper">
             <!-- LOGO -->
@@ -10,11 +10,12 @@
             </a>
 
             <!-- NAV MENU -->
-            <nav class="header__menu">
+            <nav [class]="isHamburgerOn ? 'header__menu active' : 'header__menu'">
                 <ul class="header__list">
                     <li class="header__list-item" *ngFor="let item of navMenu">
                         <a
                             [href]="item.link"
+                            (click)="clickLink(item.title)"
                             [class]="
                                 item.type === 'link'
                                     ? 'header__link header__link--regular'
@@ -29,7 +30,7 @@
             </nav>
 
             <!-- HAMBURGER -->
-            <div class="header__hamburger-menu">
+            <div [class]="isHamburgerOn ? 'header__hamburger-menu active' : 'header__hamburger-menu'" (click)="toggleHamburger()">
                 <span></span>
             </div>
         </div>

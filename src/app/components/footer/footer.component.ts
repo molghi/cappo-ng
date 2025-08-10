@@ -36,6 +36,13 @@ export class FooterComponent {
 
     copyrightText: string = '© 2025 Cappo. All rights reserved';
 
+    activeColumn: number = -1;
+
+    toggleColumn(index: number): void {
+        if (this.activeColumn === index) this.activeColumn = -1;
+        else this.activeColumn = index;
+    }
+
     socialLinks: Array<SocialLink> = [
         { link: 'https://facebook.com', icon: 'assets/images/icons/401-facebook.svg', title: 'facebook' },
         { link: 'https://instagram.com', icon: 'assets/images/icons/403-instagram.svg', title: 'instagram' },

@@ -1,5 +1,9 @@
 .header {
     padding: 60px 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
 }
 
 .header__wrapper {
@@ -66,6 +70,15 @@
     display: none;
 }
 
+.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #111;
+    padding: 20px 0;
+}
+
 /* ========================================================================================== */
 
 /* RESPONSIVE DESIGN */
@@ -91,7 +104,7 @@
 @media (max-width: 767.98px) {
     .header {
         padding: 20px 0;
-        position: relative;
+        /* position: relative; */
     }
     .header:after {
         content: "";
