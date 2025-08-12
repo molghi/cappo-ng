@@ -14,6 +14,8 @@ import { DetailsComponent } from './components/details/details.component';
 import { PopupComponent } from './components/popup/popup.component';
 import { ButtonComponent } from './components/button/button.component';
 import { FormsModule } from '@angular/forms';
+import { RatesComponent } from './components/rates/rates.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -29,8 +31,9 @@ import { FormsModule } from '@angular/forms';
         DetailsComponent,
         PopupComponent,
         ButtonComponent,
+        RatesComponent,
     ],
-    imports: [BrowserModule, FormsModule],
+    imports: [BrowserModule, FormsModule, HttpClientModule],
     providers: [],
     bootstrap: [AppComponent],
 })

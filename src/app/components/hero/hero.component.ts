@@ -13,5 +13,5 @@ export class HeroComponent {
     title: string = 'Fastest & secure platform to invest in crypto';
     text: string = 'Buy and sell cryptocurrencies, trusted by 10M wallets with over $30 billion in transactions.';
     buttonText: string = 'Try for FREE';
-    buttonLink: string = '/';
+    buttonLink: string = '#';
 }

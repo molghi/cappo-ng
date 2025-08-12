@@ -29,7 +29,7 @@ export class OptionsComponent {
             abbreviation: 'BTC',
             text: 'Digital currency in which a record of transactions is maintained.',
             buttonText: 'Start mining',
-            buttonLink: '/',
+            buttonLink: '#',
             buttonIcon: 'assets/images/icons/arrow-right.svg',
         },
         {
@@ -38,7 +38,7 @@ export class OptionsComponent {
             abbreviation: 'ETH',
             text: 'Blockchain technology to create and run decentralized digital applications.',
             buttonText: 'Start mining',
-            buttonLink: '/',
+            buttonLink: '#',
             buttonIcon: 'assets/images/icons/arrow-right.svg',
         },
         {
@@ -47,7 +47,7 @@ export class OptionsComponent {
             abbreviation: 'LTC',
             text: 'Cryptocurrency that enables instant payments to anyone in the world.',
             buttonText: 'Start mining',
-            buttonLink: '/',
+            buttonLink: '#',
             buttonIcon: 'assets/images/icons/arrow-right.svg',
         },
     ];

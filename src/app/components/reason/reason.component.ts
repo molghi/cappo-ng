@@ -12,5 +12,5 @@ export class ReasonComponent {
     title: string = 'Why you should choose Cappo';
     text: string = 'Experience the next generation cryptocurrency platform. No financial borders, extra fees, and fake reviews.';
     buttonText: string = 'Learn More';
-    buttonLink: string = '/';
+    buttonLink: string = '#';
 }

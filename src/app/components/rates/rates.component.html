@@ -1,0 +1,13 @@
+<section class="rates" *ngIf="Object.keys(rates).length > 0">
+    <div class="container">
+        <div class="rates__wrapper">
+            <div class="rates__title">Current Rates</div>
+            <div class="rates__items">
+                <div class="rates__item" *ngFor="let item of Object.entries(rates); let i = index">
+                    <span>{{ item[0][0].toUpperCase() + item[0].slice(1) }}</span>
+                    <span>{{ moneyFormatter(item[1].usd) }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

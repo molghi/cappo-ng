@@ -1,0 +1,50 @@
+.rates {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.rates__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+    margin-bottom: 30px;
+}
+
+.rates__items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rates__item {
+    flex: 1 1 33.333%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rates__item span:nth-child(1) {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.rates__item span:nth-child(2) {
+    font-weight: bold;
+    font-size: 26px;
+    color: #3671e9;
+}
+
+@media (max-width: 768px) {
+    .rates__items {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .rates__items {
+        gap: 40px;
+    }
+    .rates__item {
+        flex: 1 1 100%;
+    }
+}
